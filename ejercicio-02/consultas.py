@@ -1,12 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import and_, or_ 
-
-# se importa el operador and
+from sqlalchemy import and_, or_ # se importa el operador and 
 
 # se importa la clase(s) del
 # archivo genera_tablas
-from gendb import Country, engine
+from generar_base  import Country, engine
 
 
 Session = sessionmaker(bind=engine)
@@ -22,7 +20,6 @@ session = Session()
 ##Presentar todos los países que tengan en su cadena de nombre de país "uador" o en su cadena de capital "ito".*/
 
 
-
 #1
 
 countries = session.query(Country).filter(Country.continent=="AM" or Country.continent=="AS" or Country.continent=="NA" ).all()
@@ -30,6 +27,17 @@ countries = session.query(Country).filter(Country.continent=="AM" or Country.con
 for x in countries:
     print("%s" % (x))
     print("------")
+
+
+
+
+
+
+
+
+
+
+
 # 2
 
 

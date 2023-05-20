@@ -25,7 +25,7 @@ class Country(Base):
     languages = Column(String(500))
     is_independent = Column(String(500))
 
-    def _repr_(self):
+    def __repr__(self):
         return "País: geoname_id=%s name=%s capital:%s continent=%s dial:%s itu:%s languages:%s is_independent:%s" % (
                           self.geoname_id,
                           self.name,
